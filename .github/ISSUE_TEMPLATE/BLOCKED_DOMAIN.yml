@@ -1,7 +1,7 @@
 name: List Blocked Domain
 description: List one of our blocked websites and we will work from there
 title: "[New Blocked Domain]: Domain Here"
-label: ["Domain Blocked"]
+labels: ["Domain Blocked"]
 assignees:
   - Miygteet
 body:
