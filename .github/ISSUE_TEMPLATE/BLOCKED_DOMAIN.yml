@@ -1,0 +1,40 @@
+name: List Blocked Domain
+description: List one of our blocked websites and we will work from there
+title: "[New Blocked Domain]: Domain Here"
+label: ["Domain Blocked"]
+assignees:
+  - Miygteet
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Blocked Domain
+      description: Blocked website URL
+      placeholder: Like https://example.com/ or example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: blocked-by
+    attributes:
+      label: Blocked By?
+      description: What redirected you to a blocked page?
+      options:
+        - FortiGuard
+        - Lightspeed
+        - Palo Alto
+        - Blocksi
+        - Blocksi AI
+        - Linewize
+        - Cisco Umbrella
+        - GoGuardian
+        - Securly
+    validations:
+      required: true
+  - type: input
+    id: related
+    attributes:
+      label: Any Related Links?
+      description: Are there any links that are related to this URL, such as if doge.vercel.app is blocked, is vercel.app blocked?
+      placeholder: https://example.com/ or example.com, if none leave blank
+    validations:
+      required: false
