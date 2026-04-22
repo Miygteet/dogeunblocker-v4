@@ -1,61 +1,105 @@
-## Doge Unblocker
-Doge Unblocker is a site unblocker powered by [Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet). Our service allows you to **get around internet restrictions** to visit your favorite sites and apps, without worrying about your browsing history being saved or your internet being blocked.
-### Key Features:
-<details>
-<summary>View All Features</summary>
+<div align="center">
+  
+  <img src="https://github.com/DogeNetwork/dogeub/blob/main/public/logo.svg" width="322" />
+  <br />
+
+  [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/I3I81MF4CH) ![](https://dcbadge.limes.pink/api/server/https://discord.gg/unblocking?compact=true)
+
+  
+</div>
+
+# 
+
+A versatile, "internet hub"; The point of this project is to eliminate the need to search multiple websites for different things by packing together tools, apps, as well as entertainment and private browsing, all in one place. This is particularly useful for people who are lazy and want a "hub" that includes everything that they need to enjoy the internet.
 
 
+Many of our tools, apps, entertainment, etc. is requested through our Discord community or added through pull requests. We recommend making PRs to help out and contribute!
 
-- Advanced Tab Cloaking
-  
-- Advanced About:Blank Cloaking
-  
-- Hiding site from browser history
-  
-- Clickoff Cloaking
-  
-- Automatic URL Cloaking
-  
-- Customizable/Personalization features
-  
-- Access settings easily (right-click)
 
-- Inspect Element
-  
-- URL Bar
+> [!CAUTION]
+> Although this is an "internet hub", we do **not** include illegal, piracy, or copyright-infringing tools or apps.
 
-- Tabs
-  
-- Clean UI
-  
-- Powerful & fast web proxy
-  
-- A large selection of Apps & Games
-  
-- ...and more!
-</details>
+> ⭐ Star this repository if you are forking it, or find it useful!
 
-### Current Developers:
-- [Derpman](https://github.com/derpbyte)
-- [fowntain](https://github.com/fowntain)
-### Deployment
-[![Deploy on Railway](https://binbashbanana.github.io/deploy-buttons/buttons/remade/railway.svg)](https://railway.app/template/h7StcI?referralCode=u82tqg)
-<a href="https://render.com/deploy?repo=https://github.com/dogenetwork/v4">
-<img src="https://raw.githubusercontent.com/BinBashBanana/deploy-buttons/main/buttons/remade/render.svg"></img></a>
-[![Deploy with Vercel](https://binbashbanana.github.io/deploy-buttons/buttons/remade/vercel.svg)](https://vercel.com/new/clone?repositoryurl=https://github.com/dogenetwork/v4)
-[![Deploy to Koyeb](https://binbashbanana.github.io/deploy-buttons/buttons/remade/koyeb.svg)](https://app.koyeb.com/deploy?type=git&repository=github.com/dogenetwork/v4)
+---
 
-**Deploy locally:**
+### Development & Building
+
+dogeub can be easily deployed as a web application. Use the commands below to run it for production, or for developing.
+
+> [!WARNING]
+> This project will **not work on Vercel**. dogeub runs a custom Node server while Vercel only supports serverless functions & does not allow persistent Node servers.
+
+#### Production:
+```bash
+git clone https://github.com/xorynix/dogeub.git
+cd dogeub
+npm i
+npm run build
+node server.js
 ```
-git clone https://github.com/DogeNetwork/v4
-cd v4
-npm install
-npm start
+
+#### Development:
+
+```bash
+git clone https://github.com/xorynix/dogeub.git
+cd dogeub
+npm i
+npm run dev
 ```
-Or simply run the [`install.sh`](install.sh) file
+---
 
-### Discord
-[![Join us on Discord](https://invidget.switchblade.xyz/sWPHCdxCPU?theme=dark)](https://discord.gg/unblocking)
+#### Deploying with Docker:
 
-### Commercial Use and Licensing
-This project is released to the public under the AGPL, meaning all users and contributors must comply with its terms and make the source code of any modified or distributed versions available under the AGPL. As the copyright holders, we (DogeNetwork) reserve the right to sublicense or use the software, including modified versions, for commercial purposes under separate proprietary terms, independent of the AGPL release.
+```bash
+docker run -d \
+  --name dogeub \
+  --restart unless-stopped \
+  -p 3000:3000 \
+  -e NODE_ENV=production \
+  -e PORT=3000 \
+  ghcr.io/xorynix/dogeub:latest
+```
+
+> [!NOTE]
+> If accessing over a network instead of localhost, you will need to provide a valid SSL certificate (e.g., using a reverse proxy like Nginx or Caddy). This is required for the built-in service worker to function properly.
+
+---
+
+### Contributors / Developers
+
+[![Contributors](https://contrib.rocks/image?repo=xorynix/dogeub)](https://github.com/xorynix/dogeub/graphs/contributors)
+
+> Want to be on this list? Contribute to this project!
+
+---
+
+
+
+
+## Star History
+
+<a href="https://www.star-history.com/?repos=xorynix%2Fdogeub&type=timeline&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=xorynix/dogeub&type=timeline&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=xorynix/dogeub&type=timeline&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=xorynix/dogeub&type=timeline&legend=top-left" />
+ </picture>
+</a>
+
+
+
+
+Thanks to these libraries for making the project possible:
+
+- [MercuryWorkshop/wisp-server-node](https://github.com/MercuryWorkshop/wisp-server-node)
+- [MercuryWorkshop/scramjet](https://github.com/MercuryWorkshop/scramjet)
+- [titaniumnetwork-dev/Ultraviolet](https://github.com/titaniumnetwork-dev/Ultraviolet)
+- [lucide-icons/lucide](https://github.com/lucide-icons/lucide)
+- [pmndrs/zustand](https://github.com/pmndrs/zustand)
+- [Stuk/jszip](https://github.com/Stuk/jszip)
+  
+## License
+
+This project is licensed under the **AGPLv3** license.
+See the [LICENSE](LICENSE) file for more details.
