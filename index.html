@@ -10,6 +10,14 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-HWLK0PZVBM', { send_page_view: false });
+      // confirm leave
+      window.addEventListener('beforeunload', function (event) {
+        if (isDataUnsaved) {
+            event.preventDefault(); // Some browsers require this
+            event.returnValue = ''; // Standard way to trigger the prompt
+            // Custom text is ignored in most modern browsers
+        }
+      }
     </script>
   </head>
   <body>
